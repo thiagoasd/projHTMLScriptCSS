@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Formulário Trainee - INDRA</title>
+    </head>
+
+<body onload="carregar()">
+
+
+    <h1>Funcionario</h1>
+    <p>primeiro paragrafo</p>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td><textarea id="nome"></textarea></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="mail"></textarea></td>
+        </tr>
+        <tr>
+            <td>Cargo</td>
+            <td><textarea id="cargo"></textarea></td>
+        </tr>
+        <tr>
+            <td>Data Admissão</td>
+            <td><input type="date" id="dataAd"></td>
+        </tr>
+        <tr>
+            <td>Data Avaliação</td>
+            <td><input type="date" id="dataAv"></td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    function carregar() {
+
+        //Carrega as infos salvas do session storage
+        Nome = window.sessionStorage.getItem("nome");
+        Email = window.sessionStorage.getItem("mail");
+        Cargo = window.sessionStorage.getItem("cargo");
+        DataAd = window.sessionStorage.getItem("dataAd", Nome);
+
+        //Manipula a data para calcular a data de avaliação
+        DataAv = new Date(DataAd);
+        DataAv.setDate(DataAv.getDate() + 90)
+
+        //ISOString transforma numa String "dataThora"
+        //o split separa deixando [0] data e [1] Hora
+        DataAv = DataAv.toISOString().split("T")[0];
+
+        //Preenche os campos com as infos do session storage
+        document.querySelector("#nome").value = Nome
+        document.querySelector("#mail").value = Email
+        document.querySelector("#cargo").value = Cargo
+        document.querySelector("#dataAd").value = DataAd
+        document.querySelector("#dataAv").value = DataAv
+    }
+
+
+
+
+</script>
+
+
+
+</html>
