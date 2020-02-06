@@ -5,21 +5,52 @@
         <meta charset="utf-8">
         <title>Formulário Trainee - INDRA</title>
     </head>
-    <body>
-        <h2>Sejam bem vindos à Indra Company! <br> Cadastre os seus dados para acompanhar 
-        as suas avaliações na empresa.
-        </h2>
-        <form>
-            <div> 
-            <h3> Nome:</h3> <input type="text" name ="nome">
-            <h3> Email:</h3> <input type="text" name ="email">
-            <h3> Cargo:</h3> <input type="text" name ="cargo">
-            <h3> Data de início:</h3> <input type="date" name = "data">
-            <h3> <input type="button" value="Salvar"> 
-            <input type="button" value="Alterar" >
-            <input type="button" value="Excluir"> </h3> 
-            </div>
-        </form>    
-    </body>
+<body>
+
+
+    <h1>Cadastro</h1>
+    <p>primeiro paragrafo</p>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td><textarea id="nome"></textarea></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="mail"></textarea></td>
+        </tr>
+        <tr>
+            <td>Cargo</td>
+            <td><textarea id="cargo"></textarea></td>
+        </tr>
+        <tr>
+            <td>Data Admissão</td>
+            <td><input type="date" id="dataAd"></td>
+        </tr>
+    </table>
+
+    <button onclick="salvar()">Criar</button>
+</body>
+
+<script>
+    function salvar() {
+
+        //Pega os valores dos campos
+        Nome = document.querySelector("#nome").value
+        Email = document.querySelector("#mail").value
+        Cargo = document.querySelector("#cargo").value
+        Data = document.querySelector("#dataAd").value
+
+        //Salva os valores no session Storage
+        window.sessionStorage.setItem("nome", Nome);
+        window.sessionStorage.setItem("mail", Email);
+        window.sessionStorage.setItem("cargo", Cargo);
+        window.sessionStorage.setItem("dataAd", Data);
+
+        alert("Criado! Nome: " + Nome);
+        window.location.href = "visualizar.html"
+    }
+
+</script>
         
 </html>
