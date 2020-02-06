@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <link href="Estilo.css" rel="stylesheet">
+    <script src="treinamento_indra.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault()" name="treinamento_form">
+
+                    <h1>Verificador de Avaliações</h1>
+
+                    <div class="matricula">
+                        <label for="matricula">Matricula: </label>
+                        <input type="text" id="matriculaId" required="required" name="matricula">
+                    </div>
+
+                    <div class="nome">
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nomeId" required="required" name="nome">
+                    </div>
+
+                    <div class="cargo">
+                        <label for="cargo">Cargo: </label>
+                        <input type="text" id="cargoId" required="required" name="cargo">
+                    </div>
+
+                    <div class="email">
+                        <label for="email">Email: </label>
+                        <input type="email" id="emailId" required="required" name="email">
+                    </div>
+
+                    <div class="data">
+                        <label for="data">Data de Início: </label>
+                        <input type="date" id="dataId" required="required" name="data">
+                    </div>
+
+                    <div class="salvar">
+                        <input type="submit" onclick="salvar();" value="Salvar">
+                    </div>
+
+                    <div class="Listar">
+                        <input type="submit" onclick="listar();" value="Listar">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table>
+                    <thread>
+                        <tr>
+                            <th>Matricula</th>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Email</th>
+                            <th>Data de Início</th>
+                            <th>1º Avaliação</th>
+                            <th>2º Avaliação</th>
+                            <th>3º Avaliação</th>
+                        </tr>
+                    </thread>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
