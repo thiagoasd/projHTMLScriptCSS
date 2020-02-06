@@ -60,23 +60,20 @@
             <form style="width: 500px; margin:auto; background-color:cornflowerblue; border-radius: 10px; ">
                 <b>
                     <p><label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Nome" required /></p>
+                        <input type="text" id="nome" name="nome" placeholder="Nome Completo" required /></p>
                     <p>
                         <label for="mail">Email</label>
                         <input type="email" id="mail" name="mail" placeholder="ex: nome@hotmail.com" required />
                     </p>
                     <p>
                         <label for="cargo">Cargo</label>
-                        <input type="text" id="cargo" name="cargo" placeholder="diga logo que é Trainee" required />
+                        <input type="text" id="cargo" name="cargo" placeholder="ex: Trainee" required />
                     </p>
                     <p>
                         <label for="dataAd">Data de Admissão</label>
                         <input type="date" id="dataAd" name="dataAd" required />
                     </p>
-                    <p>
-                    <label for="dataAv">Data de Avaliação</label>
-                    <input type="date" id="dataAv" name="dataAv" required />
-                    </p>
+                    
                     
                     <input type="submit" value="Cadastro" class="btn btn-primary" id="btn_cadastro" onclick="cadastro();"/>
                                      
