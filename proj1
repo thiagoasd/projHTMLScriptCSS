@@ -3,54 +3,67 @@
     
     <head>
         <meta charset="utf-8">
-        <title>Formulário Trainee - INDRA</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
     </head>
-<body>
+    <body>
+                
+            <!--botão Enviar-->
+            <input type="submit" class="btn btn-primary" id="btn_cadastro" onclick="cadastro();" />
 
+            
+                
+            <!--botão Alterar-->    
+            <button onclick="funcao1()">Alterar</button>
+                
+            <!--botão Excluir-->
+            <button onclick="funcao2()">Excluir</button>
+             
+                
+            <!--SCRIPTS-->
+            <!--SCRIPTS BOTAO ENVIAR-->    
+            <script> function cadastro() { alert("Cadastrado com sucesso!"); }</script>
 
-    <h1>Cadastro</h1>
-    <p>primeiro paragrafo</p>
-    <table>
-        <tr>
-            <td>Nome</td>
-            <td><textarea id="nome"></textarea></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="email" id="mail"></textarea></td>
-        </tr>
-        <tr>
-            <td>Cargo</td>
-            <td><textarea id="cargo"></textarea></td>
-        </tr>
-        <tr>
-            <td>Data Admissão</td>
-            <td><input type="date" id="dataAd"></td>
-        </tr>
-    </table>
-
-    <button onclick="salvar()">Criar</button>
-</body>
-
-<script>
-    function salvar() {
-
-        //Pega os valores dos campos
-        Nome = document.querySelector("#nome").value
-        Email = document.querySelector("#mail").value
-        Cargo = document.querySelector("#cargo").value
-        Data = document.querySelector("#dataAd").value
-
-        //Salva os valores no session Storage
-        window.sessionStorage.setItem("nome", Nome);
-        window.sessionStorage.setItem("mail", Email);
-        window.sessionStorage.setItem("cargo", Cargo);
-        window.sessionStorage.setItem("dataAd", Data);
-
-        alert("Criado! Nome: " + Nome);
-        window.location.href = "visualizar.html"
-    }
-
-</script>
-        
-</html>
+            <!--SCRIPTS BOTAO ALTERAR--> 
+ 
+            <p id="demo"></p>
+ 
+            <script>
+            function funcao1()
+            {
+                var x;
+                var r=confirm("TEM CERTEZA QUE DESEJA ALTERAR?");
+                if (r==true)
+                {
+                    x ="Cadastro Alterado!";
+            }
+                else
+            {
+            x ="Cadastro não Alterado";
+            }
+                document.getElementById("demo").innerHTML=x;
+            }
+            </script>
+                
+    
+            <!--SCRIPTS BOTAO EXCLUIRF--> 
+            <p id="demo"></p>
+ 
+            <script>
+            function funcao2()
+            {
+                var x;
+                var r=confirm("TEM CERTEZA QUE DESEJA EXCLUIR?");
+                if (r==true)
+                {
+                    x ="Cadastro Excluído!";
+            }
+                else
+            {
+            x ="Cadastro não excluído";
+            }
+                document.getElementById("demo").innerHTML=x;
+            }
+            </script>
