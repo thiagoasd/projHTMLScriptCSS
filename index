@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="alerta.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+
+<style>
+
+    div {
+        text-align: center;
+        font-size: large;
+    }
+
+    input:invalid {
+        background-color: pink;
+    }
+
+    input:focus:invalid {
+        box-shadow: 0 0 5px #ff0000;
+        border-color: #ff0000;
+        color: #ff0000
+    }
+
+    text{
+        width: 200px;
+        margin: 8px;
+        border-style: unset;
+        border-radius: 5px;
+        box-sizing: content-box;
+        line-height: 2.0;
+    }
+
+    input:required {
+        background-color: whitesmoke;
+    }
+
+    button, input{
+        font-size: 18px;
+        font-weight: normal;
+        padding: 5px 12px;
+        background: limegreen;
+        border: limegreen;
+        border-radius: 10px;
+    }
+
+</style>
+
+<body>
+
+    <div class="a" style="margin: auto; width: 550px; background-color:cornflowerblue; border-radius: 10px;">
+        <h1>Cadastro de Participantes</h1>
+
+
+        <div>
+            <form style="width: 500px; margin:auto; background-color:cornflowerblue; border-radius: 10px; ">
+                <b>
+                    <p><label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome" required /></p>
+                    <p>
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail" name="mail" placeholder="ex: nome@hotmail.com" required />
+                    </p>
+                    <p>
+                        <label for="cargo">Cargo</label>
+                        <input type="text" id="cargo" name="cargo" placeholder="diga logo que é Trainee" required />
+                    </p>
+                    <p>
+                        <label for="dataAd">Data de Admissão</label>
+                        <input type="date" id="dataAd" name="dataAd" required />
+                    </p>
+                    <p>
+                    <label for="dataAv">Data de Avaliação</label>
+                    <input type="date" id="dataAv" name="dataAv" required />
+                    </p>
+                    
+                    <input type="submit" value="Cadastro" class="btn btn-primary" id="btn_cadastro" onclick="cadastro();"/>
+                                     
+
+                    <button onclick="editar()">Editar</button>
+
+                    <button onclick="excluir()">Excluir</button>
+
+                    
+
+
+            </form>
+        </div>
+</body>
+
+</html>
