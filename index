@@ -75,7 +75,7 @@
                     </p>
                     
                     
-                    <input type="submit" value="Cadastro" class="btn btn-primary" id="btn_cadastro" onclick="cadastro();"/>
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" id="btn_cadastro" onclick="cadastro();"/>
                                      
 
                     <button onclick="editar()">Editar</button>
